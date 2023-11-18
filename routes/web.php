@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
+
+
+// How to insert dynamic values into the URL
+//Remember you can aslo parse more than one id
+
+// Route::get('/users/{id}', function ($id) {
+//     return 'This is User '.$id;
+// });
